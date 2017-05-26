@@ -1,0 +1,9 @@
+# Swagger
+https://github.com/xiaodongw/swagger-finatra
+
+# Twitter Util
+https://github.com/twitter/util
+
+IntelliJ
+VM options: -Dconfig.file=src/main/resources/finatra.app.conf
+Program Arguments: -local.doc.root=src/main/resources/

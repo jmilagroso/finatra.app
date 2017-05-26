@@ -1,0 +1,6 @@
+.idea/
+output/
+*.iml
+server.*
+server-*
+config.*
