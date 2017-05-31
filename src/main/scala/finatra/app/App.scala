@@ -2,12 +2,11 @@ package finatra.app
 
 import com.github.xiaodongw.swagger.finatra.{SwaggerController, WebjarsController}
 import com.twitter.finatra.http.HttpServer
-import com.twitter.finatra.http.filters.CommonFilters
 import com.twitter.finatra.http.routing.{FileResolver, HttpRouter}
-import finatra.app.controllers.MainController
+import finatra.app.controllers._
 import io.swagger.models.{Info, Swagger}
 import com.typesafe.config.{Config, ConfigFactory}
-import finatra.app.filters.CorsFilter
+import finatra.app.filters.{CorsFilter, JWTFilter}
 
 /**
   * Created by jay <j.milagroso@gmail.com>
@@ -44,9 +43,16 @@ class Server extends HttpServer {
   override protected def configureHttp(router: HttpRouter): Unit = {
     router
       .filter[CorsFilter]
+      .filter[JWTFilter]
+      .add(new AsyncHTTPClientController())
+      .add(new HTMLController())
+      .add(new JWTController())
       .add(new MainController())
+      .add(new MustacheController())
+      .add(new SwaggerSampleController())
       .add(new SwaggerController(swagger = FinatraSwagger))
       .add(new WebjarsController(new FileResolver("", "")))
+    // @TODO inject DB validation before issuance of token.
   }
 
 }
