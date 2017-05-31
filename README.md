@@ -1,5 +1,5 @@
 # finatra.app
-A Finatra Web App
+A Finatra Web Application that implements Swagger, JWT, Async HTTP Client and TypeSafe configuration.
 
 ##### Resources
 
