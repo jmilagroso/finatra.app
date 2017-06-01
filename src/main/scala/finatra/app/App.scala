@@ -18,19 +18,19 @@ object FinatraSwagger extends Swagger
 class Server extends HttpServer {
 
   // Typesafe config
-  def conf: Config = ConfigFactory.load()
+  def config: Config = ConfigFactory.load()
 
   // Overrides Server Name
-  override def defaultHttpServerName = conf.getString("SERVER.NAME")
+  override def defaultHttpServerName = config.getString("SERVER.NAME")
 
   // Overrides Default Finatra HTTP Port
-  override def defaultFinatraHttpPort = ":" + conf.getString("SERVER.PORT")
+  override def defaultFinatraHttpPort = ":" + config.getString("SERVER.PORT")
 
   // Overrides Stream Request
-  override def streamRequest = conf.getBoolean("STREAM.REQUEST")
+  override def streamRequest = config.getBoolean("STREAM.REQUEST")
 
   // Overrides Admin HTTP Server
-  override def disableAdminHttpServer = conf.getBoolean("DISABLE.ADMIN.HTTP.SERVER")
+  override def disableAdminHttpServer = config.getBoolean("DISABLE.ADMIN.HTTP.SERVER")
 
   // Swagger
   val finatraSwaggerInfo = new Info()

@@ -7,3 +7,4 @@ import com.twitter.finatra.response.Mustache
   */
 @Mustache("simple")
 case class SimpleView(first: String, second: String)
+

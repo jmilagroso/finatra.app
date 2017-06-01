@@ -52,4 +52,17 @@ Status-Code    =
   | extension-code
 
   http://self-issued.info/docs/draft-ietf-oauth-v2-bearer.html
-  https://tools.ietf.org/html/rfc7519
+
+
+  //507d5453bf55ea649ff486c08fa502bd
+  // CITY ID: 1692193
+  // [14.6333, 121.0333]
+
+  // api.openweathermap.org/data/2.5/forecast?id=524901&APPID=1111111111
+
+  // http://samples.openweathermap.org/data/2.5/weather?id=1692193&appid=b1b15e88fa797225412429c1c50c122a1
+
+  // api.openweathermap.org/data/2.5/weather?lat=14.6333&lon=121.0333&APPID=b1b15e88fa797225412429c1c50c122a1
+  // http://samples.openweathermap.org/data/2.5/weather?lat=14.6333&lon=121.0333&appid=b1b15e88fa797225412429c1c50c122a1
+  // http://samples.openweathermap.org/data/2.5/weather?lat=14.6333&lon=121.0333&appid=b1b15e88fa797225412429c1c50c122a1
+  // api.openweathermap.org/data/2.5/weather?lat=14.6333&lon=121.0333&APPID=507d5453bf55ea649ff486c08fa502bd
